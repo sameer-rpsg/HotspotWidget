@@ -1,6 +1,7 @@
 import React from "react";
 import Hero from "./Hero";
 import ShoppableImage from "./ShoppableImage";
+import CarVideoScroll from "./CarVideoScroll";
 const products = [
   {
     x: 30,
@@ -206,7 +207,7 @@ const Article = () => {
                                   width: "100%",
                                   height: "auto",
                                 }}
-                                src="https://cdn.esquireindia.co.in/editor-images/2025-07-18T07%3A06%3A33.290Z-Inline1.jpg"
+                                src="https://cdn.esquireindia.co.in/editor-images/2025-07-18T07%3A14%3A39.195Z-5BMW%207%20Series%2C%20i7%20.jpg"
                               />
                               <div className="photoBy">
                                 <span className="caption" />
@@ -215,6 +216,7 @@ const Article = () => {
                             </div>
                           </div>
                         </div>
+                        <CarVideoScroll/>
                         <p style={{ textAlign: "left" }}>
                           <span>
                             Among all the models in the Mercedes-Benz lineup,
