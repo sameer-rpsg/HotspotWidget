@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
@@ -34,11 +34,28 @@ to fine-tune your experience.`,
 ];
 
 const CarVideoScroll = () => {
-  const videoRef = useRef(null);
-  let isLandscape;
-  // Playback constant — controls speed of video relative to scroll
+ const videoRef = useRef(null);
+  const [isLandscape, setIsLandscape] = useState(false); // Default to false
 
   useEffect(() => {
+    if (typeof window !== "undefined") {
+      const checkOrientation = () => {
+        setIsLandscape(window.innerWidth > window.innerHeight);
+      };
+
+      checkOrientation(); // Initial check
+      window.addEventListener("resize", checkOrientation);
+
+      return () => {
+        window.removeEventListener("resize", checkOrientation);
+      };
+    }
+  }, []);
+  // let isLandscape;
+  // Playback constant — controls speed of video relative to scroll
+
+ useEffect(() => {
+  if (isLandscape) {
     const registerVideo = (boundSelector, videoSelector) => {
       const bound = document.querySelector(boundSelector);
       const video = document.querySelector(videoSelector);
@@ -60,16 +77,12 @@ const CarVideoScroll = () => {
       requestAnimationFrame(scrollVideo);
     };
 
-    // ✅ Check if window is in landscape mode (width > height)
-    isLandscape = window.innerWidth > window.innerHeight;
-
-    if (isLandscape) {
-      registerVideo(
-        ".background-layer-container",
-        ".background-layer-container video"
-      );
-    }
-  }, []);
+    registerVideo(
+      ".background-layer-container",
+      ".background-layer-container video"
+    );
+  }
+}, [isLandscape]);
 
   useEffect(() => {
     const tl = gsap.timeline({
@@ -218,17 +231,21 @@ const CarVideoScroll = () => {
           className="scrollable-video-container"
           style={{ height: "5000px" }}
         >
-          <video
-            ref={videoRef}
-            className="video-background"
-            // autoPlay
-            // muted
-            // playsInline
-            preload="auto"
-            type="video/mp4"
-            // desktop video- src="https://videos.infiniti-cdn.net/infiniti/en-US/videos/1-2026-infiniti-qx60-city-performance-driving-t.mp4"
-            src="https://videos.infiniti-cdn.net/infiniti/en-US/videos/1-2026-infiniti-qx60-city-performance-driving-d.mp4"
-          />
+          {isLandscape ? (
+            <video
+              ref={videoRef}
+              className="video-background"
+              preload="auto"
+              type="video/mp4"
+              src="https://videos.infiniti-cdn.net/infiniti/en-US/videos/1-2026-infiniti-qx60-city-performance-driving-d.mp4"
+            />
+          ) : (
+            <img
+              className="image-background"
+              src="https://www.infiniti-cdn.net/content/dam/Infiniti/2026/vehicles/qx60/overview/2026-infiniti-qx60-city-performance-driving-t.jpg.ximg.l_4_h.smart.jpg"
+              alt="QX60"
+            />
+          )}
         </div>
       </div>
       <div
