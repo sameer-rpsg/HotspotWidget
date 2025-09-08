@@ -38,9 +38,9 @@ const Article = () => {
   return (
     <div>
       <Hero />
-      <div className="ad-flex-all">
+      {/* <div className="ad-flex-all">
         <div id="div-gpt-ad-stories-top" data-cy="Ad" className="ad-text"></div>
-      </div>
+      </div> */}
       <div className="p-relative">
         <div className="follows-sticky">
           <div className="follows-us-div">
@@ -207,7 +207,7 @@ const Article = () => {
                                   width: "100%",
                                   height: "auto",
                                 }}
-                                src="https://cdn.esquireindia.co.in/editor-images/2025-07-18T07%3A14%3A39.195Z-5BMW%207%20Series%2C%20i7%20.jpg"
+                                src="https://images.unsplash.com/photo-1546518071-fddcdda7580a?q=80&w=764&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                               />
                               <div className="photoBy">
                                 <span className="caption" />
@@ -384,7 +384,7 @@ const Article = () => {
                             of being in your seat.
                           </span>
                         </p>
-                        <div>
+                        {/* <div>
                           <div className="ad-flex-all">
                             <div
                               id="div-gpt-ad-stories-middle-12"
@@ -393,7 +393,7 @@ const Article = () => {
                               style={{ margin: "30px auto" }}
                             />
                           </div>
-                        </div>
+                        </div> */}
                         <p style={{ textAlign: "left" }} />
                         <p style={{ textAlign: "left" }}>
                           <span>
@@ -430,11 +430,11 @@ const Article = () => {
                                   width: "100%",
                                   height: "auto",
                                 }}
-                                src="https://cdn.esquireindia.co.in/editor-images/2025-07-18T07%3A08%3A38.725Z-1Ferrari%20296%20GTB%20%C3%AF%C2%80%C2%A2%20GTS.jpg"
+                                src="https://images.unsplash.com/photo-1610099610040-ab19f3a5ec35?q=80&w=764&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                               />
                               <div className="photoBy">
                                 <span className="caption">
-                                  Ferrari 296 GTB / GTS{" "}
+                                  Mercedes{" "}
                                 </span>
                                 <span className="courtesy" />
                               </div>
@@ -549,7 +549,7 @@ const Article = () => {
                           }}
                         >
                           <span style={{ color: "rgb(0, 0, 0)" }}>
-                            Ferrari 296 GTB / GTS{" "}
+                            Mercedes{" "}
                           </span>
                         </h4>
                         <p style={{ textAlign: "left" }}>
@@ -571,12 +571,12 @@ const Article = () => {
                           }}
                         >
                           <span style={{ color: "rgb(0, 0, 0)" }}>
-                            Hyundai Ioniq 5{" "}
+                            Hyundai Mercedes{" "}
                           </span>
                         </h4>
                         <p style={{ textAlign: "left" }}>
                           <span>
-                            The Ioniq 5 has wowed Indian EV buyers with its
+                            The Mercedes has wowed Indian EV buyers with its
                             retro-futuristic design, spacious cabin and premium
                             feel. Its long range, fast charging and advanced
                             features make it a practical, tech-forward choice.
@@ -609,10 +609,10 @@ const Article = () => {
                                   width: "100%",
                                   height: "auto",
                                 }}
-                                src="https://cdn.esquireindia.co.in/editor-images/2025-07-18T07%3A11%3A09.380Z-2Hyundai%20Ioniq%205%20.jpg"
+                                src="https://images.unsplash.com/photo-1605088672709-42e7cf00bebd?q=80&w=736&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                               />
                               <div className="photoBy">
-                                <span className="caption">Hyundai Ioniq5 </span>
+                                <span className="caption">Mercedes </span>
                                 <span className="courtesy" />
                               </div>
                             </div>
@@ -626,13 +626,13 @@ const Article = () => {
             </div>
           </div>
         </section>
-        <div className="ad-flex-all">
+        {/* <div className="ad-flex-all">
           <div
             id="div-gpt-ad-stories-bottom"
             data-cy="Ad"
             className="ad-text"
           />
-        </div>
+        </div> */}
       </div>
     </div>
   );
