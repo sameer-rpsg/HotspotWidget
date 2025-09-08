@@ -246,6 +246,37 @@
     padding: 1rem;
     font-size: 1.2rem;
   }
+
+}
+@media only screen and (max-width: 767px){
+  .circle{
+    width: 18px;
+    height: 18px;
+  }
+  .circle svg{
+    font-size: .6rem;
+  }
+  @keyframes pulse {
+  0% {
+    opacity: 0.9;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.8);
+  }
+}
+  @keyframes pulse2 {
+  0% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(1.8);
+  }
+}
 }
 /* @keyframes pulse1 {
     
@@ -260,19 +291,6 @@
   }
 } */
 @keyframes pulse2 {
-  /* 0% {
-    transform: translate(-50%, -50%) scale(0.9);
-    opacity: 0.7;
-  border: 1px solid #000;
-  }
-  70% {
-    transform: translate(-50%, -50%) scale(1.5);
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  border: 1px solid #000;
-  } */
   0% {
     opacity: 0.4;
     transform: scale(1);
