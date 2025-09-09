@@ -128,7 +128,7 @@ const Article = () => {
                     <div className="col-md-12">
                       <div className="contentSec">
                         <h1 className="heading">
-                          The Mercedes-Benz E-Class: First Among Cars And A
+                          The Mercedes-Benz GLC: First Among Cars And A
                           Benchmark In Luxury
                         </h1>
                         <p className="subheading">
@@ -207,7 +207,7 @@ const Article = () => {
                                   width: "100%",
                                   height: "auto",
                                 }}
-                                src="https://images.unsplash.com/photo-1546518071-fddcdda7580a?q=80&w=764&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                src="https://www.mercedes-benz.com/content/dam/brandhub/assets/vehicles/glc/gallery/09-2025/images/mercedes-benz-glc-x540-bev-landing-page-layered-gallery-04-1700x1700-09-2025.jpg/_jcr_content/renditions/image-crop-default.jpeg/1757253890659.jpg?im=Resize=(820);Crop,rect=(0,0,820,820)"
                               />
                               <div className="photoBy">
                                 <span className="caption" />
@@ -401,7 +401,7 @@ const Article = () => {
                             the chaos outside, I’m reminded again why this car
                             has endured. Few vehicles can blend tradition,
                             innovation, and indulgence so effortlessly. The
-                            Mercedes-Benz E-Class isn’t just transportation.
+                            Mercedes-Benz GLC isn’t just transportation.
                             It’s an experience, a status symbol, and for many, a
                             coveted car.
                           </span>
@@ -430,7 +430,7 @@ const Article = () => {
                                   width: "100%",
                                   height: "auto",
                                 }}
-                                src="https://images.unsplash.com/photo-1610099610040-ab19f3a5ec35?q=80&w=764&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                src="https://www.mercedes-benz.com/content/dam/brandhub/assets/vehicles/glc/gallery/09-2025/images/mercedes-benz-glc-x540-bev-landing-page-layered-gallery-02-1700x1700-09-2025.jpg/_jcr_content/renditions/image-crop-default.jpeg/1757253871407.jpg?im=Resize=(820);Crop,rect=(0,0,820,820)"
                               />
                               <div className="photoBy">
                                 <span className="caption">
@@ -571,7 +571,7 @@ const Article = () => {
                           }}
                         >
                           <span style={{ color: "rgb(0, 0, 0)" }}>
-                            Hyundai Mercedes{" "}
+                             Mercedes{" "}
                           </span>
                         </h4>
                         <p style={{ textAlign: "left" }}>
@@ -598,7 +598,7 @@ const Article = () => {
                               style={{ width: "100%" }}
                             >
                               <img
-                                alt="Hyundai Ioniq5 ; cars; luxury cars; auto"
+                                alt="Ioniq5 ; cars; luxury cars; auto"
                                 loading="lazy"
                                 width={700}
                                 height={475}
@@ -609,7 +609,7 @@ const Article = () => {
                                   width: "100%",
                                   height: "auto",
                                 }}
-                                src="https://images.unsplash.com/photo-1605088672709-42e7cf00bebd?q=80&w=736&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                src="https://www.mercedes-benz.com/content/dam/brandhub/assets/vehicles/glc/gallery/09-2025/images/mercedes-benz-glc-x540-bev-landing-page-layered-gallery-03-1700x1700-09-2025.jpg/_jcr_content/renditions/image-crop-default.jpeg/1757253890659.jpg?im=Resize=(820);Crop,rect=(0,0,820,820)"
                               />
                               <div className="photoBy">
                                 <span className="caption">Mercedes </span>

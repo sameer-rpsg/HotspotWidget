@@ -25,7 +25,7 @@ const Hero = ({
                   <div
                     className={`${style.hoverDiv} ${style.template1CustomHeight}`}
                   >
-                    <img src="https://cdn.esquireindia.co.in/article/2025-07-18T07%3A06%3A57.332Z-LEAD.jpg" alt="" />
+                    <img src="https://www.mercedes-benz.com/content/dam/brandhub/assets/vehicles/glc/teaser/09-2025/images/mercedes-benz-glc-x540-bev-landing-page-teaser-switcher-01-3840x2160-09-2025.jpg/_jcr_content/renditions/image-crop-default.jpeg/1757320074331.jpg?im=Resize=(820);Crop,rect=(0,0,820,461)" alt="" />
                     {/* <Image
                       src={heroImg ?? ""}
                       fill
@@ -50,7 +50,7 @@ const Hero = ({
                   {hasHtmlTags(courtesy) ? htmlParser(courtesy) : courtesy}
                 </span>
               )} */}
-              <span className={style.courtesy}>Mercedes-Benz E-Class</span>
+              <span className={style.courtesy}>Mercedes-Benz GLC</span>
             </div>
             {/* <StaticAds
               adUnits={[
