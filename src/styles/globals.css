@@ -3719,6 +3719,7 @@ a {
   position: sticky;
   height: 100vh;
   top: 0;
+   background-color: black;
 }
 .background-layer-container .video-background {
   width: 100%;

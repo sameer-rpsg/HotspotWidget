@@ -56,26 +56,43 @@ const CarVideoScroll = () => {
 
  useEffect(() => {
   if (isLandscape) {
-    const registerVideo = (boundSelector, videoSelector) => {
-      const bound = document.querySelector(boundSelector);
-      const video = document.querySelector(videoSelector);
+   const registerVideo = (boundSelector, videoSelector) => {
+  const bound = document.querySelector(boundSelector);
+  const video = document.querySelector(videoSelector);
 
-      const scrollVideo = () => {
-        if (video && video.duration) {
-          const distanceFromTop =
-            window.scrollY + bound.getBoundingClientRect().top;
-          const rawPercentScrolled =
-            (window.scrollY - distanceFromTop) /
-            (bound.scrollHeight - window.innerHeight);
-          const percentScrolled = Math.min(Math.max(rawPercentScrolled, 0), 1);
+  video.addEventListener("loadedmetadata", () => {
+    video.currentTime = 0.001;
+  });
 
-          video.currentTime = video.duration * percentScrolled;
-        }
-        requestAnimationFrame(scrollVideo);
-      };
+  const scrollVideo = () => {
+    if (video && video.readyState >= 2 && video.duration) {
+      const distanceFromTop =
+        window.scrollY + bound.getBoundingClientRect().top;
+      const rawPercentScrolled =
+        (window.scrollY - distanceFromTop) /
+        (bound.scrollHeight - window.innerHeight);
+      const percentScrolled = Math.min(Math.max(rawPercentScrolled, 0), 1);
 
-      requestAnimationFrame(scrollVideo);
-    };
+      let newTime;
+      if (percentScrolled <= 0) {
+        newTime = 0.001;
+      } else if (percentScrolled >= 1) {
+        newTime = video.duration - 0.05;
+      } else {
+        newTime = video.duration * percentScrolled;
+      }
+
+      if (Math.abs(video.currentTime - newTime) > 0.01) {
+        video.currentTime = newTime;
+      }
+    }
+
+    requestAnimationFrame(scrollVideo);
+  };
+
+  requestAnimationFrame(scrollVideo);
+};
+
 
     registerVideo(
       ".background-layer-container",
@@ -237,12 +254,14 @@ const CarVideoScroll = () => {
               className="video-background"
               preload="auto"
               type="video/mp4"
-              src="https://videos.infiniti-cdn.net/infiniti/en-US/videos/1-2026-infiniti-qx60-city-performance-driving-d.mp4"
+              // src="https://videos.infiniti-cdn.net/infiniti/en-US/videos/1-2026-infiniti-qx60-city-performance-driving-d.mp4"
+              src="/original.mp4"
             />
           ) : (
             <img
               className="image-background"
-              src="https://www.infiniti-cdn.net/content/dam/Infiniti/2026/vehicles/qx60/overview/2026-infiniti-qx60-city-performance-driving-t.jpg.ximg.l_4_h.smart.jpg"
+              // src="https://www.infiniti-cdn.net/content/dam/Infiniti/2026/vehicles/qx60/overview/2026-infiniti-qx60-city-performance-driving-t.jpg.ximg.l_4_h.smart.jpg"
+              src="https://www.mercedes-benz.com/content/dam/brandhub/assets/vehicles/glc/gallery/09-2025/images/mercedes-benz-glc-x540-bev-landing-page-layered-gallery-01-1700x1700-09-2025.jpg/_jcr_content/renditions/image-crop-default.jpeg/1757253871407.jpg?im=Resize=(1280);Crop,rect=(0,0,1280,1280)"
               alt="QX60"
             />
           )}
