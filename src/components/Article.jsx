@@ -594,7 +594,7 @@ const Article = () => {
                             }}
                           >
                             <div
-                              className="hoverDiv___O_eQ"
+                              className="hoverDiv"
                               style={{ width: "100%" }}
                             >
                               <img
@@ -602,7 +602,6 @@ const Article = () => {
                                 loading="lazy"
                                 width={700}
                                 height={475}
-                                decoding="async"
                                 data-nimg={1}
                                 style={{
                                   color: "transparent",
